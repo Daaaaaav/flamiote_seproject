@@ -1,0 +1,69 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/backgroundDark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:background="@color/buttonBlue">
+
+        <ImageView
+            android:id="@+id/chatLogo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_alert_fire"
+            android:contentDescription="Chat Logo"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/chatTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:id="@+id/chatLog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:padding="8dp"
+        android:background="@color/lightGrey"
+        android:visibility="invisible"/>
+
+    <EditText
+        android:id="@+id/userInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type your message..."
+        android:background="@color/white"
+        android:padding="8dp"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:backgroundTint="@color/buttonRed"
+        android:textColor="@color/white" />
+</LinearLayout>

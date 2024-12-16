@@ -1,0 +1,25 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" package="com.example.flamiotefirealarmapp">
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    >
+    <application android:name="com.example.flamiotefirealarmapp.FirebaseApplication" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:theme="@style/Theme.AppCompat.Light.DarkActionBar" android:networkSecurityConfig="@xml/network_security_config" android:usesCleartextTraffic="true">
+        <activity android:name="com.example.flamiotefirealarmapp.MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.flamiotefirealarmapp.BluetoothDetailsActivity" android:parentActivityName="com.example.flamiotefirealarmapp.MainActivity"/>
+        <activity android:name="com.example.flamiotefirealarmapp.ChatActivity" android:parentActivityName="com.example.flamiotefirealarmapp.MainActivity"/>
+        <activity android:name="com.example.flamiotefirealarmapp.FirebaseBacklogActivity" android:parentActivityName="com.example.flamiotefirealarmapp.MainActivity"/>
+    </application>
+</manifest>
